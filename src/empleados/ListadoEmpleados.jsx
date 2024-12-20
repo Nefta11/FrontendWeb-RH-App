@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { NumericFormat } from 'react-number-format';
 
 export default function ListadoEmpleados() {
 
@@ -41,11 +42,15 @@ export default function ListadoEmpleados() {
                             <th scope="row">{empleado.id}</th>
                             <td>{empleado.nombre}</td>
                             <td>{empleado.departamento}</td>
-                            <td>{empleado.sueldo}</td>
+                            <td><NumericFormat value={empleado.sueldo}
+                                displayType={'text'}
+                                thousandSeparator="," prefix={'$'}
+                                decimalScale={2} fixedDecimalScale />
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
-        </div>
+        </div >
     );
 }
