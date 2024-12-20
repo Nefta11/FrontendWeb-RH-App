@@ -39,7 +39,7 @@ export default function ListadoEmpleados() {
                 <tbody>
                     {empleados.map((empleado, indice) => (
                         <tr key={indice}>
-                            <th scope="row">{empleado.id}</th>
+                            <th scope="row">{empleado.idEmpleado}</th>
                             <td>{empleado.nombre}</td>
                             <td>{empleado.departamento}</td>
                             <td><NumericFormat value={empleado.sueldo}
