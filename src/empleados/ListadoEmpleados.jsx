@@ -11,10 +11,14 @@ export default function ListadoEmpleados() {
     }, []);
 
     const cargarEmpleados = async () => {
-        const response = await axios.get(urlBase);
-        console.log("Resultados cargar empleados");
-        console.log(response.data);
-        setEmpleados(response.data);
+        try {
+            const response = await axios.get(urlBase);
+            console.log("Resultados cargar empleados");
+            console.log(response.data);
+            setEmpleados(response.data);
+        } catch (error) {
+            console.error("Error al cargar empleados:", error);
+        }
     };
 
     return (
@@ -32,8 +36,8 @@ export default function ListadoEmpleados() {
                     </tr>
                 </thead>
                 <tbody>
-                    {empleados.map((empleado) => (
-                        <tr key={empleado.id}>
+                    {empleados.map((empleado, indice) => (
+                        <tr key={indice}>
                             <th scope="row">{empleado.id}</th>
                             <td>{empleado.nombre}</td>
                             <td>{empleado.departamento}</td>
