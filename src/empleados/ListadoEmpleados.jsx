@@ -57,10 +57,10 @@ export default function ListadoEmpleados() {
                             </td>
                             <td className='text-center'></td>
                             <div className=''>
-                            <Link to={`/editar/${empleado.idEmpleado}`} 
-                            className='btn btn-warning btn-sm me-3'>Editar</Link>
-                            <button onClick={()=> eliminarEmpleado(empleado.idEmpleado)}
-                            className='btn btn-danger btn-sm'>Eliminar</button>
+                                <Link to={`/editar/${empleado.idEmpleado}`}
+                                    className='btn btn-warning btn-sm me-3'>Editar</Link>
+                                <button onClick={() => eliminarEmpleado(empleado.idEmpleado)}
+                                    className='btn btn-danger btn-sm'>Eliminar</button>
                             </div>
                         </tr>
                     ))}
