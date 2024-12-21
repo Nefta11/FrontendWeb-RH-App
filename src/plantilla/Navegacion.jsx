@@ -18,9 +18,6 @@ export default function Navegacion() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/agregar">Agregar Empleado</Link>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Pricing</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
